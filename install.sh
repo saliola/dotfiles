@@ -10,3 +10,6 @@ set -e
 stow -v -t ~ tmux
 git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
+
+stow -v -t ~ bash
+stow -v -t ~ inputrc

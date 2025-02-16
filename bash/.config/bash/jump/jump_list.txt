@@ -1,0 +1,56 @@
+# current courses and references
+git-repos -> "$HOME/git-repos"
+m2 -> "$HOME/git-repos/MAT2260"
+
+# configuration
+j -> "$HOME/.bash-conf/scripts/jump"
+jump -> "$HOME/.bash-conf/scripts/jump"
+c -> "$HOME/.config/"
+config -> "$HOME/.config/"
+bash-conf -> "$HOME/.bash-conf"
+nvim-conf -> "$HOME/.config/nvim"
+tmux-conf -> "$HOME/.tmux-conf"
+ghostty-conf -> "$HOME/.config/ghostty"
+vim-conf -> "$HOME/.vim"
+
+# application directories
+apps -> "$HOME/Applications"
+sage -> "$HOME/Applications/sage"
+
+# various directories
+dl -> "$HOME/Downloads"
+dt -> "$HOME/Desktop"
+docs -> "$HOME/Documents"
+downloads -> "$HOME/Downloads"
+website -> "$HOME/saliola.github.io"
+
+# ownCloud (UQAM)
+oc -> "$HOME/ownCloud"
+advising -> "$HOME/ownCloud/uqam/advising"
+articles -> "$HOME/ownCloud/Mathematics/articles"
+courses -> "$HOME/ownCloud/Mathematics/Courses"
+cv -> "$HOME/ownCloud/Mathematics/Applications/cv.git"
+ebooks -> "$HOME/ownCloud/eBooks"
+lacim -> "$HOME/ownCloud/lacim"
+math -> "$HOME/ownCloud/Mathematics"
+notes -> "$HOME/ownCloud/notes"
+projects -> "$HOME/ownCloud/Mathematics/projects"
+recommendation-letters -> "$HOME/ownCloud/uqam/recommendation-letters"
+reference-letters -> "$HOME/ownCloud/uqam/recommendation-letters"
+reimbursements -> "$HOME/ownCloud/uqam/reimbursements"
+reports -> "$HOME/ownCloud/uqam/reports"
+reviews -> "$HOME/ownCloud/Mathematics/reviews"
+talks -> "$HOME/ownCloud/Mathematics/Talks"
+uqam -> "$HOME/ownCloud/uqam"
+
+# crm
+crm -> "$HOME/ownCloud/crm"
+
+# projects
+imm -> "$HOME/ownCloud/Mathematics/articles/Immaculate"
+lrb -> "$HOME/ownCloud/Mathematics/articles/lrbs"
+pleth -> "$HOME/ownCloud/Mathematics/projects/crystal_pleth"
+crystal_pleth -> "$HOME/ownCloud/Mathematics/projects/crystal_pleth"
+qmn -> "$HOME/ownCloud/Mathematics/articles/quantum-mn-rule"
+r2r -> "$HOME/ownCloud/Mathematics/projects/random-to-random"
+sty -> "$HOME/ownCloud/Mathematics/projects/monoide-stylique"
