@@ -1,0 +1,37 @@
+[user]
+    name = Franco Saliola
+    email = saliola@gmail.com
+[core]
+    editor = vi
+    excludesfile = /home/saliola/Dropbox/Configs/gitignore_global
+[alias]
+    p = pull
+    a = add
+    d = diff
+    s = status
+    l = lg
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)[%an]%Creset' --abbrev-commit --date=relative
+    ci = commit -a
+    cv = commit --verbose
+    co = checkout
+    br = branch
+    wdiff = diff --color-words
+    dcw = diff --color-words
+[merge]
+    log = true
+[push]
+    default = upstream
+[color]
+    diff = auto
+    ui = auto
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[instaweb]
+    httpd = webrick
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
