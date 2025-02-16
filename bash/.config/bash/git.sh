@@ -1,3 +1,5 @@
+# Define `g` as an alias for `git`;
+# and configure it to default to `git status` if no command is specified.
 function _my_git_cmd() {
     if [ $# -eq 0 ] ; then
         git status
@@ -8,17 +10,7 @@ function _my_git_cmd() {
 
 alias g='_my_git_cmd'
 
-# source platform dependant configs
-UNAME=$(uname)
-if [[ $UNAME == 'Darwin' ]]; then
-    source $BASHCONF_DIR/scripts/git-completion.bash
-elif [[ $UNAME == 'Linux' ]]; then
-    HOSTNAME=$(hostname -d)
-    if [[ $HOSTNAME == *computecanada.ca || $HOSTNAME == *calculquebec.ca || $HOSTNAME == *sharcnet ]]; then
-        source /cvmfs/soft.computecanada.ca/nix/var/nix/profiles/16.09/etc/bash_completion.d/git-completion.bash
-    else
-        source /usr/share/bash-completion/completions/git
-    fi;
-fi
-
-complete -o default -o nospace -F _git g
+# To configure bash completion for `g`, use `complete -p git` to see the
+# completion rule used for `git` and copy/paste it replacing `git` by `g`.
+source /usr/local/etc/bash_completion.d/git-completion.bash
+complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
