@@ -13,3 +13,4 @@ git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 
 stow -v -t ~ bash
 stow -v -t ~ inputrc
+stow -v -t ~ ghostty
