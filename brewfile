@@ -109,11 +109,15 @@ brew "zeromq"
 brew "zlib"
 
 # Casks
+cask "1password"
+cask "1password-cli"
+cask "deepl"
 cask "firefox"
 cask "ghostty"
 cask "google-chrome"
 cask "rectangle"
 cask "skim"
+cask "todoist"
 cask "xournal++"
 
 # Casks requiring password for installation
