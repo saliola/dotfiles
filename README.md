@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/saliola/dotfiles/HEAD/github-ssh-keygen.s
 xcode-select --install
 ```
 
-4. Clone this repo (this requires installation of xcode tools):
+4. Clone this repo:
 ```
 git clone git@github.com:saliola/dotfiles.git ~/.dotfiles
 ```
