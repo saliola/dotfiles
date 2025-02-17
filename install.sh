@@ -37,6 +37,7 @@ stow -v -t ~ git
 stow -v -t ~ inputrc
 stow -v -t ~ kitty
 stow -v -t ~ nvim
+stow -v -t ~ rectangle
 
 
 echo "Setting shell for $USER"
