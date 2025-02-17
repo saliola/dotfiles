@@ -2,6 +2,9 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
+    dependencies = {
+        "saliola/shell-color-scripts",
+    },
     opts = {
         styles = {
             notification_history = {
@@ -17,11 +20,11 @@ return {
                 {
                     pane = 1,
                     section = "terminal",
-                    cmd = "colorscript -e pacman-ghosts",
+                    cmd = vim.fn.stdpath("data") .. "/lazy/shell-color-scripts/colorscripts/pacman-ghosts",
                     width = 54,
                     height = 7,
                     padding = 0,
-                    indent = 4,
+                    indent = 3,
                 },
                 {
                     section = "startup",
