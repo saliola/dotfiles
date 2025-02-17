@@ -35,6 +35,7 @@ stow -v -t ~ bash
 stow -v -t ~ ghostty
 stow -v -t ~ git
 stow -v -t ~ inputrc
+stow -v -t ~ karabiner
 stow -v -t ~ kitty
 stow -v -t ~ nvim
 stow -v -t ~ rectangle
