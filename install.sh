@@ -43,3 +43,9 @@ stow -v -t ~ rectangle
 
 echo "Setting shell for $USER"
 sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
+
+
+echo "Creating some symlinks in home directory"
+cd ~
+ln -s ~/Downloads dl
+ln -s ~/ownCloud oc

@@ -26,6 +26,11 @@ cd ~/.dotfiles
 sh install.sh
 ```
 
+6. Log in to various services (ownCloud, Todoist, ...).
+
+7. Other apps to install: MS Office, etc.
+
+
 ## References
 
 - [Getting Started with Dotfiles](https://driesvints.com/blog/getting-started-with-dotfiles)
