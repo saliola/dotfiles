@@ -14,12 +14,15 @@ if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Add brew to the PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Update Homebrew recipes
 brew update
 
-# Install packages listed in Brewfile
+# Install packages listed in brewfile
 brew tap homebrew/bundle
-brew bundle --file ./Brewfile
+brew bundle --file ./brewfile
 
 
 echo "Using stow to symlink configs..."
@@ -30,6 +33,11 @@ git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 
 stow -v -t ~ bash
 stow -v -t ~ ghostty
+stow -v -t ~ git
 stow -v -t ~ inputrc
 stow -v -t ~ kitty
 stow -v -t ~ nvim
+
+
+echo "Setting shell for $USER"
+sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
