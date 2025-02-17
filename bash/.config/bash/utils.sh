@@ -21,4 +21,4 @@ function tarfile_util () {
 alias tf=tarfile_util
 
 # create a timestamped copy of a file
-alias timestamp=$BASHCONF_DIR/scripts/timestamp.sh
+alias timestamp=$BASH_SCRIPTS_DIR/timestamp.sh
