@@ -7,7 +7,7 @@ function add_alias() {
     #
     #   add_alias alias linux-command mac-command
     #
-    # add_alias(h, 'hg') is equivalent to `alias h='hg'`
+    # `add_alias h 'hg'` is equivalent to `alias h='hg'`
     if [ -z ${3+x} ]; then
         alias $1="$2";
     else
