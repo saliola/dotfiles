@@ -112,9 +112,11 @@ brew "zlib"
 cask "firefox"
 cask "ghostty"
 cask "google-chrome"
-cask "karabiner-elements"
 cask "rectangle"
 cask "skim"
-cask "zoom"
 cask "xournal++"
+
+# Casks requiring password for installation
+cask "karabiner-elements"
 cask "owncloud"
+cask "zoom"
