@@ -13,9 +13,8 @@ source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
 source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.3
 
-# add homebrew's sbin to PATH
-PATH=/usr/local/sbin:$PATH
-export PATH=$PATH
+# add homebrew to the PATH and set homebrew environment variables
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # add my bin directory to the PATH
 export PATH=$HOME/Applications/bin:$PATH
