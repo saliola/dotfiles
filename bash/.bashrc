@@ -17,6 +17,15 @@ stty -ixon
 
 export EDITOR=nvim
 
+# Bash Completion. We assume bash-4.1 or newer (macOS defaults to bash-3.2),
+# which can be installed via brew as follows:
+# ```
+# brew install bash
+# brew install bash_completion@2
+# ```
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 source $BASH_SCRIPTS_DIR/jump/jump.sh
 source $BASH_SCRIPTS_DIR/utils.sh
 source $BASH_SCRIPTS_DIR/git.sh

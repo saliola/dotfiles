@@ -11,6 +11,5 @@ function _my_git_cmd() {
 alias g='_my_git_cmd'
 
 # To configure bash completion for `g`, use `complete -p git` to see the
-# completion rule used for `git` and copy/paste it replacing `git` by `g`.
-source /usr/local/etc/bash_completion.d/git-completion.bash
+# completion rule used for `git` and copy/paste it, replacing `git` by `g`.
 complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
