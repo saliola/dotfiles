@@ -14,7 +14,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # configure shell to automatically use chruby
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
+
+# Set the ruby version to the lastest stable version supported by Jekyll
+# https://jekyllrb.com/docs/installation/macos/#step-2-install-chruby-and-the-latest-ruby-with-ruby-install
+# To install it `ruby-install ruby 3.4.1`
+chruby ruby-3.4.1
 
 # add my bin directory to the PATH
 export PATH=$HOME/Applications/bin:$PATH
