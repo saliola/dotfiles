@@ -8,7 +8,7 @@
 curl https://raw.githubusercontent.com/saliola/dotfiles/HEAD/github-ssh-keygen.sh | sh -s "saliola@gmail.com"
 ```
 
-2. Add the new ssh key to github.
+2. [Add the new ssh key to github](https://github.com/settings/keys)
 
 3. Clone this repo:
 ```
