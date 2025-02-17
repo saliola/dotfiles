@@ -23,8 +23,7 @@ export EDITOR=nvim
 # brew install bash
 # brew install bash_completion@2
 # ```
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[[ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
 
 source $BASH_SCRIPTS_DIR/jump/jump.sh
 source $BASH_SCRIPTS_DIR/utils.sh
