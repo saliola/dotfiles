@@ -23,7 +23,7 @@ git clone git@github.com:saliola/dotfiles.git ~/.dotfiles
 5. Run the installation script:
 ```
 cd ~/.dotfiles
-./install.sh
+sh install.sh
 ```
 
 ## References
