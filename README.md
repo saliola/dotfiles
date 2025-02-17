@@ -5,7 +5,7 @@
 1. Generate a new ssh key to github; the process is automated by the
    `github-ssh-keygen.sh` script:
 ```
-curl https://raw.githubusercontent.com/driesvints/dotfiles/HEAD/github-ssh-keygen.sh | sh -s "saliola@gmail.com"
+curl https://raw.githubusercontent.com/saliola/dotfiles/HEAD/github-ssh-keygen.sh | sh -s "saliola@gmail.com"
 ```
 
 2. Add the new ssh key to github.
