@@ -5,12 +5,12 @@ m2 -> "$HOME/git-repos/MAT2260"
 # configuration
 j -> "$HOME/.bash-conf/scripts/jump"
 jump -> "$HOME/.bash-conf/scripts/jump"
-c -> "$HOME/.config/"
-config -> "$HOME/.config/"
-bash-conf -> "$HOME/.bash-conf"
-nvim-conf -> "$HOME/.config/nvim"
-tmux-conf -> "$HOME/.tmux-conf"
-ghostty-conf -> "$HOME/.config/ghostty"
+dotfiles -> "$HOME/.dotfiles/"
+df -> "$HOME/.dotfiles/"
+bash-conf -> "$HOME/.dotfiles/bash/.config/bash"
+nvim-conf -> "$HOME/.dotfiles/nvim/.config/nvim"
+tmux-conf -> "$HOME/.dotfiles/tmux/.config/tmux"
+ghostty-conf -> "$HOME/.dotfiles/ghostty/.config/ghostty"
 vim-conf -> "$HOME/.vim"
 
 # application directories
