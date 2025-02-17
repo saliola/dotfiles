@@ -9,7 +9,11 @@
 # .. _`Difference between .bashrc and .bash_profile`: http://superuser.com/questions/183870/difference-between-bashrc-and-bash-profile/183980
 
 # add homebrew to the PATH and set homebrew environment variables
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -f "/usr/local/bin/brew" ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+elif [ -f "/opt/homebrew/bin/brew shellenv" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # configure shell to automatically use chruby
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
