@@ -10,12 +10,17 @@ curl https://raw.githubusercontent.com/saliola/dotfiles/HEAD/github-ssh-keygen.s
 
 2. [Add the new ssh key to github](https://github.com/settings/keys)
 
-3. Clone this repo:
+3. Install Xcode Command Line tools:
+```
+xcode-select --install
+```
+
+4. Clone this repo (this requires installation of xcode tools):
 ```
 git clone git@github.com:saliola/dotfiles.git ~/.dotfiles
 ```
 
-3. Run the installation script:
+5. Run the installation script:
 ```
 cd ~/.dotfiles
 ./install.sh
