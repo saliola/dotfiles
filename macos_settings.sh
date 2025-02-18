@@ -29,6 +29,9 @@ defaults write -app skim SKRightSidePaneWidth '0'
 defaults write -app skim SUAutomaticallyUpdate '1'
 defaults write -app skim SUEnableAutomaticChecks '1'
 
+# Wallpaper
+osascript -e 'tell application "System Events" to set picture of every desktop to "~/.dotfiles/wallpapers/tunic.jpg"'
+
 # Kill affected applications so that changes can take effect
 for app in "Dock" \
     "Finder" \
