@@ -45,6 +45,10 @@ echo "Setting shell for $USER"
 sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
 
 
+echo "Tweaking some macOS settings"
+sh macos_settings.sh
+
+
 echo "Creating some symlinks in home directory"
 cd ~
 ln -s ~/Downloads dl
