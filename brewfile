@@ -130,6 +130,7 @@ cask "google-chrome"
 cask "rectangle"
 cask "skim"
 cask "todoist"
+cask "webex"
 cask "xournal++"
 
 # Casks requiring password for installation
