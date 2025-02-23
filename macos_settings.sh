@@ -28,6 +28,11 @@ defaults write -app skim SKLeftSidePaneWidth '0'
 defaults write -app skim SKRightSidePaneWidth '0'
 defaults write -app skim SUAutomaticallyUpdate '1'
 defaults write -app skim SUEnableAutomaticChecks '1'
+defaults write -app Skim SKAutoCheckFileUpdate '1'
+defaults write -app Skim SKAutoReloadFileUpdate '1'
+defaults write -app Skim SKTeXEditorPreset ''
+defaults write -app Skim SKTeXEditorCommand 'nvim'
+defaults write -app Skim SKTeXEditorArguments '"--headless -c \"VimtexInverseSearch %line '%file'\""'
 
 # Wallpaper
 osascript -e 'tell application "System Events" to set picture of every desktop to "~/.dotfiles/wallpapers/tunic.jpg"'
