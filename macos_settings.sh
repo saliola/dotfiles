@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Reference: https://github.com/driesvints/dotfiles/blob/main/.macos
+# References:
+# https://github.com/driesvints/dotfiles/blob/main/.macos
+# https://ryanmo.co/2017/01/05/setting-keyboard-shortcuts-from-terminal-in-macos/
 
 # Close any open System Preferences panes,
 # to prevent them from overriding settings we’re about to change
@@ -33,6 +35,9 @@ defaults write -app Skim SKAutoReloadFileUpdate '1'
 defaults write -app Skim SKTeXEditorPreset ''
 defaults write -app Skim SKTeXEditorCommand 'nvim'
 defaults write -app Skim SKTeXEditorArguments '"--headless -c \"VimtexInverseSearch %line '%file'\""'
+
+# Microsoft Outlook
+defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Toggle Unread" "^t"
 
 # Wallpaper
 osascript -e 'tell application "System Events" to set picture of every desktop to "~/.dotfiles/wallpapers/tunic.jpg"'
