@@ -31,6 +31,14 @@ sh install.sh
 7. Other apps to install: MS Office, etc.
 
 
+## Manual configuration
+
+- Remove Todoist shortcut for quick-add (it is set to Option-Space):
+    - go to the preferences in the Todoist app
+    - search for "Keyboard Shortcuts"
+    - click on the X under Quick Add Task to clear the shortcut
+
+
 ## References
 
 - [Getting Started with Dotfiles](https://driesvints.com/blog/getting-started-with-dotfiles)
