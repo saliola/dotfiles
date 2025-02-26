@@ -123,6 +123,7 @@ brew "zlib"
 # Casks
 cask "1password"
 cask "1password-cli"
+cask "chatbox"
 cask "deepl"
 cask "firefox"
 cask "ghostty"
