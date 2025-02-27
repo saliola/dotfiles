@@ -1,5 +1,6 @@
 return {
     {
+        -- authenticate with the command :Copilot auth
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
         event = "InsertEnter",
@@ -39,7 +40,7 @@ return {
                             name = 'llama3',
                             schema = {
                                 model = {
-                                    default = 'llama3.2:latest',
+                                    default = 'llama3.3:70b',
                                 },
                                 num_ctx = {
                                     default = 2048,
