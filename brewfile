@@ -135,6 +135,7 @@ cask "rectangle"
 cask "skim"
 cask "todoist"
 cask "webex"
+cask "whatsapp"
 cask "xournal++"
 
 # Casks requiring password for installation
