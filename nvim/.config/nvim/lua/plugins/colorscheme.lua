@@ -1,11 +1,5 @@
 return {
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        lazy = true,
-    },
-
-    {
         "vague2k/vague.nvim",
         lazy = true,
         config = function()
