@@ -1,13 +1,5 @@
 return {
     {
-        "vague2k/vague.nvim",
-        lazy = true,
-        config = function()
-            require("vague").setup({})
-        end
-    },
-
-    {
         "rebelot/kanagawa.nvim",
         event = { "VimEnter" },
         lazy = true,
