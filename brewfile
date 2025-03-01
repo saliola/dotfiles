@@ -44,6 +44,9 @@ brew "lazygit"
 brew "chruby"
 brew "ruby-install"
 
+# miscellaneous
+brew "ollama"
+
 # SageMath
 # https://doc.sagemath.org/html/en/installation/source.html#sec-installation-from-sources
 brew "apaffenholz/polymake/polymake"
@@ -123,6 +126,7 @@ brew "zlib"
 # Casks
 cask "1password"
 cask "1password-cli"
+cask "chatbox"
 cask "deepl"
 cask "firefox"
 cask "ghostty"
