@@ -35,19 +35,32 @@ return {
         config = function()
             require('codecompanion').setup({
                 adapters = {
-                    llama3 = function()
+                    gemma2 = function()
                         return require('codecompanion.adapters').extend('ollama', {
-                            name = 'llama3',
+                            name = 'gemma2',
                             schema = {
                                 model = {
-                                    default = 'llama3.3:70b',
+                                    default = 'gemma2',
                                 },
                                 num_ctx = {
                                     default = 2048,
                                 },
                             },
                         })
-                    end
+                    end,
+                    mistral = function()
+                        return require('codecompanion.adapters').extend('ollama', {
+                            name = 'mistral',
+                            schema = {
+                                model = {
+                                    default = 'mistral',
+                                },
+                                num_ctx = {
+                                    default = 2048,
+                                },
+                            },
+                        })
+                    end,
                 },
             })
         end
