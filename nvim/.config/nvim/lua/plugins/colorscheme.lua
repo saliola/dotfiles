@@ -1,19 +1,5 @@
 return {
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        lazy = true,
-    },
-
-    {
-        "vague2k/vague.nvim",
-        lazy = true,
-        config = function()
-            require("vague").setup({})
-        end
-    },
-
-    {
         "rebelot/kanagawa.nvim",
         event = { "VimEnter" },
         lazy = true,
