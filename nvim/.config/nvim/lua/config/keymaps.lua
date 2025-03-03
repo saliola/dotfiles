@@ -242,6 +242,12 @@ set_keymap({ desc = "search word or visual selection",
     mode = { "n", "v" },
     command = function() Snacks.picker.grep_word() end,
 })
+set_keymap({ desc = "search in visual selection",
+    keys = "g/",
+    mode = "x",
+    command = "<Esc>/\\%V",
+    -- reference: https://www.reddit.com/r/neovim/comments/1ixsk40/comment/meonl4t/
+})
 
 set_keymap({ desc = "initiate Snacks command",
     keys = "<leader>S",
