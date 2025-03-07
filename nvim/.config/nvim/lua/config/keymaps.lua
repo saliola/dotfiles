@@ -153,6 +153,10 @@ set_keymap({ desc = "fzf help tags",
     keys = "<leader>fh",
     command = "<cmd>lua require('fzf-lua').help_tags()<cr>",
 })
+set_keymap({ desc = "fzf lines",
+    keys = "<leader>fl",
+    command = "<cmd>lua require('fzf-lua').lines()<cr>",
+})
 set_keymap({ desc = "fzf recent files (oldfiles)",
     keys = "<leader>fr",
     command = "<cmd>lua require('fzf-lua').oldfiles()<cr>",
@@ -203,6 +207,10 @@ set_keymap({ desc = "pick icon",
 set_keymap({ desc = "pick keymaps",
     keys = "<leader>pk",
     command = function() Snacks.picker.keymaps() end,
+})
+set_keymap({ desc = "pick line",
+    keys = "<leader>pl",
+    command = function() Snacks.picker.lines() end,
 })
 set_keymap({ desc = "pick recent file",
     keys = "<leader>pr",
