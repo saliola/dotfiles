@@ -22,3 +22,6 @@ alias tf=tarfile_util
 
 # create a timestamped copy of a file
 alias timestamp=$BASH_SCRIPTS_DIR/timestamp.sh
+
+# encrypt a pdf file
+alias pdfencrypt=$BASH_SCRIPTS_DIR/pdfencrypt.sh
