@@ -1,3 +1,5 @@
+local version_info = vim.version()
+
 return {
     "folke/snacks.nvim",
     priority = 1000,
@@ -25,6 +27,10 @@ return {
                     height = 7,
                     padding = 0,
                     indent = 3,
+                },
+                {
+                    title = string.format("Neovim version: %d.%d.%d", version_info.major, version_info.minor, version_info.patch),
+                    align = "center",
                 },
                 {
                     section = "startup",
@@ -58,7 +64,7 @@ return {
                     end,
                     cmd = "hub status --short --branch --renames",
                     height = 5,
-                    padding = 0,
+                    padding = 1,
                     ttl = 5 * 60,
                     indent = 3,
                 },
