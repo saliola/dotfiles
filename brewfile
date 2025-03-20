@@ -39,6 +39,7 @@ brew "git"
 brew "git-lfs"
 brew "hub"
 brew "lazygit"
+brew "lighttpd"
 
 # Jekyll
 brew "chruby"
