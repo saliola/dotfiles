@@ -26,8 +26,6 @@ brew "fzf"
 brew "neovim"
 brew "node"
 brew "ripgrep"
-brew "texlive"
-brew "latexdiff"
 cask "font-fira-code"
 cask "font-monaspace"
 cask "font-monaspace-nerd-font"
@@ -41,6 +39,11 @@ brew "git-lfs"
 brew "hub"
 brew "lazygit"
 brew "lighttpd"
+
+# latex
+brew "texlive"
+brew "latexdiff"
+brew "biber"
 
 # Jekyll
 brew "chruby"
