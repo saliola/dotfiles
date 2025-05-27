@@ -18,6 +18,7 @@ apps -> "$HOME/Applications"
 sage -> "$HOME/Applications/sage"
 
 # various directories
+db -> "$HOME/Dropbox"
 dl -> "$HOME/Downloads"
 dt -> "$HOME/Desktop"
 docs -> "$HOME/Documents"
