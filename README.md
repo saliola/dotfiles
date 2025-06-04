@@ -26,18 +26,9 @@ cd ~/.dotfiles
 sh install.sh
 ```
 
-6. Other apps to install: MS Office, etc.
+6. Log in / Download various other services / apps.
 
-7. Log in to various services/apps:
-   - ownCloud
-   - Fantastical
-   - Google Chrome
-   - OneDrive
-   - Todoist
-   - gh
-   - reMarkable
-
-8. Compile/Install SageMath
+7. Compile/Install SageMath.
 
 
 ## Manual configuration
