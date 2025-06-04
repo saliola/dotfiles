@@ -21,7 +21,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 
 # Install packages listed in brewfile
-brew tap homebrew/bundle
 brew bundle --file ./brewfile
 
 

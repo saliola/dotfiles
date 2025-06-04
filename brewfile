@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "apaffenholz/polymake"
 
 # utils
@@ -135,11 +134,11 @@ cask "chatbox"
 cask "deepl"
 cask "discord"
 cask "dropbox"
+cask "fantastical"
 cask "firefox"
-cask "fujitsu-scansnap-home"
 cask "ghostty"
 cask "google-chrome"
-cask "rectangle"
+cask "remarkable"
 cask "skim"
 cask "todoist"
 cask "webex"
@@ -147,6 +146,7 @@ cask "whatsapp"
 cask "xournal++"
 
 # Casks requiring password for installation
+cask "fujitsu-scansnap-home"
 cask "karabiner-elements"
 cask "owncloud"
 cask "zoom"
