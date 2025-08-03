@@ -7,45 +7,38 @@ set -x
 set -e
 
 
-echo "Installing apps via brew..."
+echo "Installing apps via apt..."
 
-# Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+sudo apt install stow
+sudo apt install tmux
+sudo apt install npm
+sudo apt install tree-sitter-cli
 
-# Add brew to the PATH
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Update Homebrew recipes
-brew update
-
-# Install packages listed in brewfile
-brew bundle --file ./brewfile
+sudo snap install neovim --classic
+sudo snap install hub --classic
 
 
 echo "Using stow to symlink configs..."
+
 # tmux
 stow -v -t ~ tmux
 git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
+# bash
+rm ~/.bashrc ~/.profile
 stow -v -t ~ bash
+
+# others
 stow -v -t ~ ghostty
 stow -v -t ~ git
 stow -v -t ~ inputrc
-stow -v -t ~ karabiner
 stow -v -t ~ kitty
 stow -v -t ~ nvim
-stow -v -t ~ rectangle
 
 
-echo "Setting shell for $USER"
-sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
-
-
-echo "Tweaking some macOS settings"
-sh macos_settings.sh
+echo "Tweaking some settings"
+sh tweak_settings.sh
 
 
 echo "Creating some symlinks in home directory"
