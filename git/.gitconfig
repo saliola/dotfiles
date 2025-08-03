@@ -2,7 +2,7 @@
     name = Franco Saliola
     email = saliola@gmail.com
 [core]
-    editor = vi
+    editor = nvim
     excludesfile = /home/saliola/Dropbox/Configs/gitignore_global
 [alias]
     p = pull
