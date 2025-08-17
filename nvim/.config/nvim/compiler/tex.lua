@@ -4,8 +4,8 @@
 -- Config
 local tex_outputdir = '/tmp/latex-output-directory'
 local makeprgs = {
-    pdflatex = 'pdflatex -file-line-error -interaction=nonstopmode -halt-on-error -synctex=1 -output-directory=' .. tex_outputdir .. ' %',
-    latexmk = 'latexmk -g -file-line-error -interaction=nonstopmode -pdf -output-directory=' .. tex_outputdir .. ' %',
+    pdflatex = 'pdflatex -file-line-error -interaction=nonstopmode -halt-on-error -synctex=1 -output-directory=' .. tex_outputdir .. ' "%"',
+    latexmk = 'latexmk -g -file-line-error -interaction=nonstopmode -pdf -output-directory=' .. tex_outputdir .. ' "%"',
 }
 
 -- Create the directory for the latex output files
