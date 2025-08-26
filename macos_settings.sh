@@ -47,6 +47,9 @@ defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Toggle Unre
 defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Pin" "^p"
 defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Unpin" "^\$p"
 
+# Keynote
+defaults write com.apple.iWork.Keynote NSUserKeyEquivalents -dict-add "Paste and Match Style" "@\$v"
+
 # Wallpaper
 osascript -e 'tell application "System Events" to set picture of every desktop to "~/.dotfiles/wallpapers/tunic.jpg"'
 
