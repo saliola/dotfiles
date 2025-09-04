@@ -50,6 +50,11 @@ defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Unpin" "^\$
 # Keynote
 defaults write com.apple.iWork.Keynote NSUserKeyEquivalents -dict-add "Paste and Match Style" "@\$v"
 
+# Desktop
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false;    # Disable 'Click wallpaper to reveal desktop'
+defaults write com.apple.WindowManager GloballyEnabled -bool false;                     # Disable Stage Manager
+defaults write com.apple.WindowManager StandardHideDesktopIcons -bool true;             # Do not show desktop icons
+
 # Wallpaper
 osascript -e 'tell application "System Events" to set picture of every desktop to "~/.dotfiles/wallpapers/tunic.jpg"'
 
