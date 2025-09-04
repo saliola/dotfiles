@@ -4,6 +4,37 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "F2 to switch to Fantastical",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f2" },
+                                "to": [{ "software_function": { "open_application": { "bundle_identifier": "com.flexibits.fantastical2.mac" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "F1 to switch to Todoist",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f1" },
+                                "to": [{ "software_function": { "open_application": { "bundle_identifier": "com.todoist.mac.Todoist" } } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Switch to Ghostty with F4 (replace macOS default Spotlight)",
+                        "enabled": false,
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f4" },
+                                "to": [{ "shell_command": "open -a Ghostty.app" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change caps_lock to left_control",
                         "manipulators": [
                             {
