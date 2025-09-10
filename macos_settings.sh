@@ -50,6 +50,11 @@ defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Unpin" "^\$
 # Keynote
 defaults write com.apple.iWork.Keynote NSUserKeyEquivalents -dict-add "Paste and Match Style" "@\$v"
 
+# Fantastical
+defaults write com.flexibits.fantastical2.docktile AdaptToTheme -int "1";
+defaults write com.flexibits.fantastical2.docktile AlternativeIcon -int "10";
+defaults write com.flexibits.fantastical2.docktile IconHidesDate -int "0";
+
 # Desktop
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false;    # Disable 'Click wallpaper to reveal desktop'
 defaults write com.apple.WindowManager GloballyEnabled -bool false;                     # Disable Stage Manager
