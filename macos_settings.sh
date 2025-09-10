@@ -58,6 +58,9 @@ defaults write com.apple.WindowManager StandardHideDesktopIcons -bool true;     
 # Wallpaper
 osascript -e 'tell application "System Events" to set picture of every desktop to "~/.dotfiles/wallpapers/tunic.jpg"'
 
+# Keyboard
+defaults write com.apple.HIToolbox AppleFnUsageType -int "0"    # Choose what happens when the Fn/Globe is pressed: nothing
+
 # Kill affected applications so that changes can take effect
 for app in "Dock" \
     "Finder" \
