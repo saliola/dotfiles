@@ -16,7 +16,7 @@ brew "ncdu"
 brew "openjdk@17"
 brew "pdftk-java"
 brew "python@3.13"
-brew "tldr"
+brew "tlrc"
 brew "yazi"
 
 # nvim
