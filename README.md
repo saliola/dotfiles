@@ -2,7 +2,7 @@
 
 ## Installation
 
-1. Generate a new ssh key to github; the process is automated by the
+1. Generate a new ssh key and upload it to github; the process is automated by the
    `github-ssh-keygen.sh` script:
 ```
 curl https://raw.githubusercontent.com/saliola/dotfiles/HEAD/github-ssh-keygen.sh | sh -s "saliola@gmail.com"
