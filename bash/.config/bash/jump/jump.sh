@@ -14,7 +14,7 @@
 
 cecho() {
     tput setaf 2
-    echo "$1"
+    echo "$@"
     tput sgr0
 }
 
@@ -23,8 +23,8 @@ function jj() {
 }
 
 function LS() {
-    if [ -x "$(command -v exa)" ]; then
-        command exa
+    if [ -x "$(command -v eza)" ]; then
+        command eza
     else
         command ls
     fi;

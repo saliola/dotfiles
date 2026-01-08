@@ -41,6 +41,7 @@ stow -v -t ~ rectangle
 
 
 echo "Setting shell for $USER"
+HOMEBREW_PREFIX="$(brew --prefix)"
 sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
 
 
