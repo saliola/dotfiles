@@ -66,6 +66,10 @@ osascript -e 'tell application "System Events" to set picture of every desktop t
 # Keyboard
 defaults write com.apple.HIToolbox AppleFnUsageType -int "0"    # Choose what happens when the Fn/Globe is pressed: nothing
 
+# Global keyboard shortcuts (All Applications)
+defaults write "Apple Global Domain" NSUserKeyEquivalents -dict-add "Move to Built-in Retina Display" "~^\\U2193"
+defaults write "Apple Global Domain" NSUserKeyEquivalents -dict-add "Move to DELL U2515H" = "~^\\U2191"
+
 # Kill affected applications so that changes can take effect
 for app in "Dock" \
     "Finder" \
