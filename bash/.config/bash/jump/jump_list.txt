@@ -45,6 +45,7 @@ talks -> "$HOME/ownCloud/Mathematics/Talks"
 uqam -> "$HOME/ownCloud/uqam"
 
 # crm
+c -> "$HOME/OneDrive - Universite de Montreal/crm"
 crm -> "$HOME/OneDrive - Universite de Montreal/crm"
 
 # projects
