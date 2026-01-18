@@ -19,10 +19,10 @@ fi
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
-# Set the ruby version to the lastest stable version supported by Jekyll
-# https://jekyllrb.com/docs/installation/macos/#step-2-install-chruby-and-the-latest-ruby-with-ruby-install
-# To install it `ruby-install ruby 3.4.1`
-chruby ruby-3.4.1
+# Set the ruby version to the that which the `github-pages` gems expects
+# This information can be found here: https://pages.github.com/versions.json
+# To install it, use `ruby-install ruby 3.3.4`
+chruby ruby-3.3.4
 
 # add my bin directory to the PATH
 export PATH=$HOME/Applications/bin:$PATH
