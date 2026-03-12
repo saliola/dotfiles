@@ -150,8 +150,17 @@ _j()
             COMPREPLY=()
         else
             TARGET_DIR=$(echo $BOOKMARK | sed 's/^.*-> //')
+            # TARGET_DIR="${TARGET_DIR/\$HOME/$HOME}" # Expand literal '$HOME' string
+            # TARGET_DIR="${TARGET_DIR/#\~/$HOME}"    # Expand leading '~'
             eval "builtin cd $TARGET_DIR"
-            _filedir -d
+            local selected=$(fzf --query="$cur" \
+                                 --walker=dir,follow \
+                                 --height 40% \
+                                 --reverse \
+                                 --preview 'tree -C {} | head -200' \
+                                 --bind 'ctrl-/:toggle-preview' \
+                                 --prompt="Select directory in $TARGET_DIR: ")
+            COMPREPLY=("$selected")
         fi
     else
         COMPREPLY=()
