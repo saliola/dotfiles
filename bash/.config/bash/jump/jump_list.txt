@@ -3,8 +3,8 @@ git-repos -> "$HOME/git-repos"
 m2 -> "$HOME/git-repos/MAT2260"
 
 # configuration
-j -> "$HOME/.bash-conf/scripts/jump"
-jump -> "$HOME/.bash-conf/scripts/jump"
+j -> "$HOME/.config/bash/jump"
+jump -> "$HOME/.config/bash/jump"
 dotfiles -> "$HOME/.dotfiles/"
 df -> "$HOME/.dotfiles/"
 bash-conf -> "$HOME/.dotfiles/bash/.config/bash"
