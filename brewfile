@@ -7,6 +7,7 @@ brew "coreutils"
 brew "eza"
 brew "stow"
 brew "tmux"
+brew "tree"
 brew "wget"
 
 # command line utils
