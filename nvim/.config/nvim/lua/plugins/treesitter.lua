@@ -3,8 +3,7 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
-            local configs = require("nvim-treesitter.configs")
-            configs.setup({
+            require("nvim-treesitter").setup({
                 highlight = {
                     enable = true,
                     additional_vim_regex_highlighting = { "latex", "markdown" },
