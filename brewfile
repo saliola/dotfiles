@@ -50,8 +50,9 @@ brew "biber"
 brew "chruby"
 brew "ruby-install"
 
-# miscellaneous
-brew "ollama"
+# conda + friends
+brew "micromamba"
+cask "miniconda"
 
 # SageMath
 # https://doc.sagemath.org/html/en/installation/source.html#sec-installation-from-sources
