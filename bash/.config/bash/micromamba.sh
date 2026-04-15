@@ -6,3 +6,5 @@ micromamba() {
     eval "$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX")"
     micromamba "$@"
 }
+
+alias mamba=micromamba
