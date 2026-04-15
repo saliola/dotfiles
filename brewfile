@@ -52,7 +52,6 @@ brew "ruby-install"
 
 # conda + friends
 brew "micromamba"
-cask "miniconda"
 
 # SageMath
 # https://doc.sagemath.org/html/en/installation/source.html#sec-installation-from-sources

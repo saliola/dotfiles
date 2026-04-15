@@ -29,6 +29,7 @@ source $BASH_SCRIPTS_DIR/jump/jump.sh
 source $BASH_SCRIPTS_DIR/utils.sh
 source $BASH_SCRIPTS_DIR/git.sh
 source $BASH_SCRIPTS_DIR/bash_prompt.sh
+source $BASH_SCRIPTS_DIR/micromamba.sh
 
 source $BASH_SCRIPTS_DIR/add_alias.sh
 add_alias c "clear"
