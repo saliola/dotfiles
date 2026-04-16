@@ -26,7 +26,14 @@ return {
                 callback = function(args)
                     -- pcall prevents crash for filetypes with no treesitter parser
                     pcall(vim.treesitter.start, args.buf)
-                    vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                    -- Don't override indentexpr for filetypes with poor treesitter indent support
+                    local ts_indent_disabled = {
+                        tex = true,
+                        latex = true
+                    }
+                    if not ts_indent_disabled[vim.bo[args.buf].filetype] then
+                        vim.bo[args.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                    end
                     vim.wo[0][0].foldmethod = "expr"
                     vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
                     vim.wo[0][0].foldenable = false
