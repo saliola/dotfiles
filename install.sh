@@ -16,7 +16,7 @@ sudo apt install bash-completion eza htop ncdu
 sudo apt install gh git-lfs hub
 
 sudo snap install nvim --classic
-sudo apt install nodejs npm
+sudo snap install node --classic
 sudo apt install fd-find fzf ripgrep tree
 sudo apt remove tree-sitter-cli
 npm install -g tree-sitter-cli
