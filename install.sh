@@ -31,6 +31,7 @@ git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 stow -v -t ~ bash
+stow -v -t ~ finetune
 stow -v -t ~ ghostty
 stow -v -t ~ git
 stow -v -t ~ inputrc
