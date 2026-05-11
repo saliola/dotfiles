@@ -20,12 +20,12 @@ filename="${file%.*}"
 extension="${file##*.}"
 
 # Construct the new filename by appending the date to the current filename
-date=$(date +%Y-%m-%d)
+datetime=$(date +%Y-%m-%d_%H-%M-%S)
 if [ "$filename" == "$file" ]; then
-    # No extension case
-    new_file="${filename}-$date"
+    # the case where the filename has no extension
+    new_file="${filename}-${datetime}"
 else
-    new_file="${filename}-$date.$extension"
+    new_file="${filename}-${datetime}.${extension}"
 fi
 
 # Rename the file
