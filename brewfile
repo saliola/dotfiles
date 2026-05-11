@@ -46,6 +46,7 @@ brew "biber"
 # Jekyll
 brew "chruby"
 brew "ruby-install"
+brew "libyaml"
 
 # general build tools
 brew "autoconf"
