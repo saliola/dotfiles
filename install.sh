@@ -54,3 +54,8 @@ echo "Creating some symlinks in home directory"
 cd ~
 ln -s ~/Downloads dl
 ln -s ~/ownCloud oc
+
+
+# conda: install Miniforge separately via script:
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh -b
