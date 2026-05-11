@@ -18,7 +18,15 @@ function prompt_left() {
     else
         CurDir=$DIR;
     fi;
-    echo -e "${PS1_HOSTNAME}\001\033[00m\002\001\033[33m\002:${CurDir}\001\033[00m\002"
+
+    # conda environment indicator
+    if [ -n "$CONDA_DEFAULT_ENV" ]; then
+        CONDA_PROMPT="\001\033[32m\002(${CONDA_DEFAULT_ENV})\001\033[00m\002 "
+    else
+        CONDA_PROMPT=""
+    fi
+
+    echo -e "${CONDA_PROMPT}${PS1_HOSTNAME}\001\033[00m\002\001\033[33m\002:${CurDir}\001\033[00m\002"
 }
 
 function prompt_right() {
