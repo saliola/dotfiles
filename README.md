@@ -30,7 +30,6 @@ sh install.sh
 
 7. Compile/Install SageMath.
 
-
 ## Manual configuration
 
 - Remove Todoist shortcut for quick-add (it is set to Option-Space):
@@ -38,6 +37,25 @@ sh install.sh
     - search for "Keyboard Shortcuts"
     - click on the X under Quick Add Task to clear the shortcut
 
+## 'Reset' to configuration in the brewfile
+
+The following sequence of commands will install/uninstall packages to make the
+system match the brewfile exactly.
+
+```
+brew update
+brew bundle --file=brewfile                     # install everything in the brewfile
+brew bundle cleanup --file=brewfile --force     # remove what's not in the brewfile
+brew autoremove                                 # clean up any leftover dependencies
+brew cleanup
+```
+
+If you want to see a list of everything that would be uninstalled to make the
+system match the brewfile exactly, use the following command:
+
+```
+brew bundle cleanup --file=brewfile
+```
 
 ## References
 
