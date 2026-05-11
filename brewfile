@@ -47,10 +47,7 @@ brew "biber"
 brew "chruby"
 brew "ruby-install"
 
-# conda: install Miniforge separately via script:
-# curl -L https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh | bash
-
-# general build tools (also needed by SageMath, but useful standalone)
+# general build tools
 brew "autoconf"
 brew "automake"
 brew "cmake"
@@ -77,21 +74,19 @@ brew "pandoc"
 # Casks
 cask "1password"
 cask "1password-cli"
-cask "chatbox"
-cask "deepl"
 cask "discord"
-# cask "dropbox"
 cask "eqmac"
-# cask "fantastical"
+cask "fantastical"
 cask "firefox"
 cask "ghostty"
+cask "google-chrome"
 cask "skim"
 cask "todoist-app"
 cask "webex"
 cask "whatsapp"
 
 # Casks requiring password for installation
-# cask "fujitsu-scansnap-home"
+cask "fujitsu-scansnap-home"
 cask "karabiner-elements"
-# cask "owncloud"
-# cask "zoom"
+cask "owncloud"
+cask "zoom"
