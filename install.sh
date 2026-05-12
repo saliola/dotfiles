@@ -30,15 +30,15 @@ stow -v -t ~ tmux
 git clone git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 
+stow -v -t ~ aerospace
 stow -v -t ~ bash
-stow -v -t ~ finetune
+stow -v -t ~ borders
 stow -v -t ~ ghostty
 stow -v -t ~ git
 stow -v -t ~ inputrc
 stow -v -t ~ karabiner
 stow -v -t ~ kitty
 stow -v -t ~ nvim
-stow -v -t ~ rectangle
 
 
 echo "Setting shell for $USER"
@@ -56,7 +56,7 @@ ln -s ~/Downloads dl
 ln -s ~/ownCloud oc
 
 
-# conda: install Miniforge separately via script:
+echo "Installing miniforge/conda"
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh -b
 conda config --set changeps1 false
