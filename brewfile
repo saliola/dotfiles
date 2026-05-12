@@ -72,10 +72,13 @@ brew "graphviz"
 brew "imagemagick"
 brew "pandoc"
 
+# aerospace + borders
+cask "nikitabobko/tap/aerospace"
+brew "FelixKratz/formulae/borders"
+
 # Casks
 cask "1password"
 cask "1password-cli"
-cask "aerospace"
 cask "discord"
 cask "eqmac"
 cask "fantastical"
