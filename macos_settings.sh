@@ -66,6 +66,12 @@ osascript -e 'tell application "System Events" to set picture of every desktop t
 # Keyboard
 defaults write com.apple.HIToolbox AppleFnUsageType -int "0"    # Choose what happens when the Fn/Globe is pressed: nothing
 
+# Disable Mission Control shortcuts (ctrl-arrows)
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 79 "<dict><key>enabled</key><false/></dict>"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 80 "<dict><key>enabled</key><false/></dict>"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 81 "<dict><key>enabled</key><false/></dict>"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 82 "<dict><key>enabled</key><false/></dict>"
+
 # Global keyboard shortcuts (All Applications)
 defaults write "Apple Global Domain" NSUserKeyEquivalents -dict-add "Move to Built-in Retina Display" "~^\\U2193"
 defaults write "Apple Global Domain" NSUserKeyEquivalents -dict-add "Move to DELL U2515H" = "~^\\U2191"
