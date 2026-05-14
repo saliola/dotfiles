@@ -159,8 +159,10 @@ on-mode-changed = []
 
     ctrl-left  = 'workspace prev --wrap-around'
     ctrl-right = 'workspace next --wrap-around'
-    ctrl-alt-left = 'move-workspace-to-monitor --wrap-around left'
-    ctrl-alt-right = 'move-workspace-to-monitor --wrap-around right'
+    ctrl-shift-right = ['move-node-to-workspace next', 'workspace next']
+    ctrl-shift-left  = ['move-node-to-workspace prev', 'workspace prev']
+    ctrl-shift-up = 'move-node-to-monitor --wrap-around left'
+    ctrl-shift-down = 'move-node-to-monitor --wrap-around right'
 
     # # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-tab = 'focus dfs-next --boundaries-action wrap-around-the-workspace'
