@@ -41,6 +41,10 @@ stow -v -t ~ kitty
 stow -v -t ~ nvim
 
 
+echo "Copying preferences into ~/Library/Preferences..."
+cp swipeaerospace/Library/Preferences/club.mediosz.SwipeAeroSpace.plist ~/Library/Preferences/
+
+
 echo "Setting shell for $USER"
 HOMEBREW_PREFIX="$(brew --prefix)"
 sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
