@@ -39,7 +39,6 @@ stow -v -t ~ inputrc
 stow -v -t ~ karabiner
 stow -v -t ~ kitty
 stow -v -t ~ nvim
-stow -v -t ~ swipeaerospace
 
 
 echo "Setting shell for $USER"
