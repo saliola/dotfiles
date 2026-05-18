@@ -64,3 +64,4 @@ echo "Installing miniforge/conda"
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh -b
 conda config --set changeps1 false
+conda config --set auto_activate_base false
