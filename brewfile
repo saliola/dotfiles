@@ -76,6 +76,7 @@ brew "pandoc"
 # aerospace + borders
 cask "nikitabobko/tap/aerospace"
 brew "FelixKratz/formulae/borders"
+cask "mediosz/tap/swipeaerospace"
 
 # Casks
 cask "1password"

@@ -76,6 +76,18 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 82 "<dic
 defaults write "Apple Global Domain" NSUserKeyEquivalents -dict-add "Move to Built-in Retina Display" "~^\\U2193"
 defaults write "Apple Global Domain" NSUserKeyEquivalents -dict-add "Move to DELL U2515H" = "~^\\U2191"
 
+# Trackpad
+# - Disable 3 and 4 finger horizontal swipes (Mission Control / App Switching)
+# - Disable "Swipe between pages" in browsers (interferes with horizontal gestures)
+# - Disable App Exposé and Mission Control vertical swipes (to be safe)
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerHorizSwipeGesture -int 0
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 0
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.fourFingerHorizSwipeGesture -int 0
+defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.apple.dock showMissionControlGestureEnabled -bool false
+defaults write com.apple.dock showAppExposeGestureEnabled -bool false
+
 # Kill affected applications so that changes can take effect
 for app in "Dock" \
     "Finder" \

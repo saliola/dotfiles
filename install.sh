@@ -41,6 +41,10 @@ stow -v -t ~ kitty
 stow -v -t ~ nvim
 
 
+echo "Copying preferences into ~/Library/Preferences..."
+cp swipeaerospace/Library/Preferences/club.mediosz.SwipeAeroSpace.plist ~/Library/Preferences/
+
+
 echo "Setting shell for $USER"
 HOMEBREW_PREFIX="$(brew --prefix)"
 sudo chsh -s $HOMEBEW_PREFIX/bin/bash $USER
@@ -60,3 +64,4 @@ echo "Installing miniforge/conda"
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh -b
 conda config --set changeps1 false
+conda config --set auto_activate_base false
