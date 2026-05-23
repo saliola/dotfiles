@@ -99,14 +99,23 @@ on-mode-changed = []
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-    # You can uncomment the following lines to open up terminal with alt + enter shortcut
-    # (like in i3)
-    # alt-enter = '''exec-and-forget osascript -e '
-    # tell application "Terminal"
-    #     do script
-    #     activate
-    # end tell'
-    # '''
+    # Open a terminal with alt + enter (like in i3). This opens a new ghostty
+    # window in the CURRENT workspace by creating a new window on a running
+    # ghostty process and pulling it the focused workspace.
+    alt-enter = '''exec-and-forget /bin/bash -c '
+        current=$(aerospace list-workspaces --focused)
+        before=$(aerospace list-windows --all --json | jq -r ".[] | select(.\"app-name\"==\"Ghostty\") | .\"window-id\"" | sort)
+        osascript -e "tell application \"Ghostty\" to make new window"
+        new=""
+        for i in $(seq 1 30); do
+            after=$(aerospace list-windows --all --json | jq -r ".[] | select(.\"app-name\"==\"Ghostty\") | .\"window-id\"" | sort)
+            new=$(comm -13 <(echo "$before") <(echo "$after") | head -1)
+            [ -n "$new" ] && break
+            sleep 0.05
+        done
+        [ -n "$new" ] && aerospace move-node-to-workspace --window-id "$new" "$current"
+        '
+    '''
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
