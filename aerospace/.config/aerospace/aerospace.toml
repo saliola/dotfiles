@@ -124,6 +124,29 @@ on-mode-changed = []
         '
     '''
 
+    # Open a new Google Chrome window the CURRENT workspace.
+    alt-shift-enter = '''exec-and-forget /bin/bash -c '
+        current=$(aerospace list-workspaces --focused)
+        before=$(aerospace list-windows --all --json | jq -r ".[] | select(.\"app-name\"==\"Google Chrome\") | .\"window-id\"" | sort)
+        osascript -e "tell application \"Google Chrome\"
+            try
+                make new window
+            end try
+        end tell"
+        new=""
+        for i in $(seq 1 30); do
+            after=$(aerospace list-windows --all --json | jq -r ".[] | select(.\"app-name\"==\"Google Chrome\") | .\"window-id\"" | sort)
+            new=$(comm -13 <(echo "$before") <(echo "$after") | head -1)
+            [ -n "$new" ] && break
+            sleep 0.05
+        done
+        if [ -n "$new" ]; then
+            aerospace move-node-to-workspace --window-id "$new" "$current"
+            aerospace focus --window-id "$new"
+        fi
+        '
+    '''
+
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
