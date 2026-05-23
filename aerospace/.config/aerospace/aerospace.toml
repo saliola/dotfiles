@@ -105,7 +105,11 @@ on-mode-changed = []
     alt-enter = '''exec-and-forget /bin/bash -c '
         current=$(aerospace list-workspaces --focused)
         before=$(aerospace list-windows --all --json | jq -r ".[] | select(.\"app-name\"==\"Ghostty\") | .\"window-id\"" | sort)
-        osascript -e "tell application \"Ghostty\" to make new window"
+        osascript -e "tell application \"Ghostty\"
+            try
+                make new window
+            end try
+        end tell"
         new=""
         for i in $(seq 1 30); do
             after=$(aerospace list-windows --all --json | jq -r ".[] | select(.\"app-name\"==\"Ghostty\") | .\"window-id\"" | sort)
@@ -113,7 +117,10 @@ on-mode-changed = []
             [ -n "$new" ] && break
             sleep 0.05
         done
-        [ -n "$new" ] && aerospace move-node-to-workspace --window-id "$new" "$current"
+        if [ -n "$new" ]; then
+            aerospace move-node-to-workspace --window-id "$new" "$current"
+            aerospace focus --window-id "$new"
+        fi
         '
     '''
 
