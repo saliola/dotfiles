@@ -154,6 +154,10 @@ on-mode-changed = []
     # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
     alt-z = 'fullscreen'
     alt-shift-z = 'macos-native-fullscreen'
+    alt-f = [
+        'layout floating',
+    ]
+    alt-shift-f = 'layout tiling'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     alt-h = 'focus --boundaries all-monitors-outer-frame --boundaries-action stop left'
