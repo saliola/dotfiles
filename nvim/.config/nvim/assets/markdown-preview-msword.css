@@ -1,0 +1,237 @@
+/* =========================================
+   Screen Layout (Mimic Word App UI)
+   ========================================= */
+@media screen {
+    body {
+        background-color: #f3f2f1 !important;
+        display: flex !important;
+        justify-content: center !important;
+        padding: 2rem 0 !important;
+        margin: 0 !important;
+    }
+}
+
+/* =========================================
+   Clipboard & Selection Control
+   ========================================= */
+/* 1. Prevent anything outside the document from being highlighted or copied */
+body {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+/* 2. Re-enable text selection ONLY inside your actual document */
+.markdown-body {
+    -webkit-user-select: text !important;
+    user-select: text !important;
+}
+
+/* =========================================
+   Typography & Main Container
+   ========================================= */
+.markdown-body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+
+    font-family: "Calibri", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.15 !important;
+
+    /* Simulate an 8.5 x 11 inch physical page */
+    width: 8.5in !important;
+    min-height: 11in !important;
+    padding: 1in !important;
+    box-sizing: border-box !important;
+
+    /* Drop shadow to elevate the page off the grey background */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+    max-width: none !important;
+}
+
+/* Paragraphs */
+.markdown-body p {
+    margin-top: 0 !important;
+    margin-bottom: 8pt !important;
+}
+
+/* =========================================
+   Headings (Restored Custom Spacing)
+   ========================================= */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+    font-family: "Calibri Light", "Calibri", "Helvetica Neue", sans-serif !important;
+    color: #2F5496 !important;
+    font-weight: normal !important;
+    margin-top: 14pt !important;
+    margin-bottom: 8pt !important;
+    border-bottom: none !important;
+}
+
+.markdown-body h1 { font-size: 16pt !important; }
+.markdown-body h2 { font-size: 13pt !important; }
+.markdown-body h3 { font-size: 12pt !important; color: #1F3763 !important; }
+.markdown-body h4 { font-size: 11pt !important; font-style: italic !important; color: #000000 !important; }
+
+/* Hide the link icons prepended to headings */
+.markdown-body h1 .anchor,
+.markdown-body h2 .anchor,
+.markdown-body h3 .anchor,
+.markdown-body h4 .anchor,
+.markdown-body h5 .anchor,
+.markdown-body h6 .anchor {
+    display: none !important;
+}
+
+/* =========================================
+   Links, Tables & Blocks
+   ========================================= */
+/* Links */
+.markdown-body a {
+    color: #0563C1 !important;
+    text-decoration: underline !important;
+}
+
+/* Tables formatted like the "Grid Table 1 Light" Word style */
+.markdown-body table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin-bottom: 12pt !important;
+}
+
+.markdown-body table,
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid #7F7F7F !important;
+}
+
+.markdown-body th {
+    background-color: #F2F2F2 !important;
+    padding: 4pt 6pt !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    color: #000000 !important;
+}
+
+.markdown-body td {
+    padding: 4pt 6pt !important;
+}
+
+/* Math blocks, inline math, and code */
+.markdown-body code,
+.markdown-body pre {
+    font-family: "Menlo", "Monaco", "Courier New", monospace !important;
+    font-size: 10pt !important;
+}
+
+.markdown-body pre {
+    background-color: #f9f9f9 !important;
+    padding: 10pt !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 0 !important;
+}
+
+/* MathJax alignment for formulas */
+.markdown-body .MathJax_Display {
+    margin: 12pt 0 !important;
+}
+
+/* Blockquotes */
+.markdown-body blockquote {
+    margin: 0 0 8pt 0 !important;
+    padding-left: 10pt !important;
+    border-left: 3px solid #D9D9D9 !important;
+    font-style: italic !important;
+    color: #595959 !important;
+}
+
+/* =========================================
+   Lists & Spacing
+   ========================================= */
+/* 1. Main List Containers */
+.markdown-body ul,
+.markdown-body ol {
+    margin-top: 0 !important;
+    margin-bottom: 10pt !important;
+    padding-left: 1em !important;
+}
+
+/* 2. Nested Lists */
+.markdown-body li > ul,
+.markdown-body li > ol {
+    margin-top: 4pt !important;
+    margin-bottom: 0 !important;
+    padding-left: 1em !important;
+}
+
+/* 3. Individual List Items */
+.markdown-body li {
+    margin-bottom: 1ex !important;
+}
+
+/* 4. Edge Cases & Overrides */
+.markdown-body li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.markdown-body li > p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* =========================================
+   Print Styles (Physical Paper Layout)
+   ========================================= */
+@media print {
+    /* Hide the specific page header element when printing */
+    #page-header {
+        display: none !important;
+    }
+
+    /* 1. Set physical paper size and standard MS Word margins */
+    @page {
+        size: letter;
+        margin: 1in !important;
+    }
+
+    /* 2. Reset the outermost HTML/Body */
+    html, body {
+        background-color: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 3. Strip the artificial screen wrapper and fake padding */
+    .markdown-body {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: auto !important;
+        min-height: auto !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+    }
+
+    /* Prevent page breaks inside blocks */
+    .markdown-body pre,
+    .markdown-body blockquote,
+    .markdown-body table,
+    .markdown-body tr,
+    .markdown-body .MathJax_Display {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* Keep headings attached to the paragraph that follows them */
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+    }
+}
