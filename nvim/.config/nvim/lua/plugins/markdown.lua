@@ -17,7 +17,7 @@ return {
             vim.g.mkdp_markdown_css = css_style_msword
 
             -- Command to toggle between styles
-            vim.api.nvim_create_user_command('MarkdownPreviewToggleStyle', function()
+            vim.api.nvim_create_user_command('MarkdownPreviewStyleToggle', function()
                 -- Stop the server first
                 vim.cmd('MarkdownPreviewStop')
 
