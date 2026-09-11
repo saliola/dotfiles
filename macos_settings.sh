@@ -46,6 +46,7 @@ defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Reply" "^r"
 defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Toggle Unread" "^t"
 defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Pin" "^p"
 defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Unpin" "^\$p"
+defaults write com.microsoft.Outlook NSUserKeyEquivalents -dict-add "Send" "^~\$@s"
 
 # Keynote
 defaults write com.apple.iWork.Keynote NSUserKeyEquivalents -dict-add "Paste and Match Style" "@\$v"
