@@ -30,7 +30,7 @@ oc -> "$HOME/ownCloud"
 advising -> "$HOME/ownCloud/uqam/advising"
 articles -> "$HOME/ownCloud/Mathematics/articles"
 courses -> "$HOME/ownCloud/Mathematics/Courses"
-cv -> "$HOME/ownCloud/Mathematics/Applications/cv.git"
+cv -> "$HOME/git-repos/cv"
 ebooks -> "$HOME/ownCloud/eBooks"
 lacim -> "$HOME/ownCloud/lacim"
 math -> "$HOME/ownCloud/Mathematics"
@@ -45,8 +45,8 @@ talks -> "$HOME/ownCloud/Mathematics/Talks"
 uqam -> "$HOME/ownCloud/uqam"
 
 # crm
-c -> "$HOME/OneDrive - Universite de Montreal/crm"
-crm -> "$HOME/OneDrive - Universite de Montreal/crm"
+c -> "$HOME/od/crm"
+crm -> "$HOME/od/crm"
 
 # projects
 imm -> "$HOME/ownCloud/Mathematics/articles/Immaculate"
